@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People's English Boarding School</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+</script>
+  <!-- Navbar -->
+  <nav class="nav">
+  <div class="logo">People's English Boarding School</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Academics</a></li>
+    <li><a href="#">Gallery</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Inspiring Excellence in Education</h1>
+      <p>Where young minds grow into future leaders 🌟</p>
+      <a href="#contact" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container grid-3">
+      <div class="feature-box">
+        <h3>🏫 Experienced Teachers</h3>
+        <p>Our teachers are passionate and well-trained to help students thrive.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🧠 Smart Curriculum</h3>
+        <p>We blend academics with real-world skills and creativity.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🎨 Holistic Learning</h3>
+        <p>From science to arts, we support every talent and interest.</p>
+      </div>
+    </div>
+  </section>
+<section class="gallery-section">
+  <div class="container">
+    <h2>📸 School Gallery</h2>
+    <div class="gallery">
+      <img src="https://placekitten.com/300/200" alt="Event 1" onclick="openModal(this.src)" />
+      <img src="https://placekitten.com/301/200" alt="Event 2" onclick="openModal(this.src)" />
+      <img src="https://placekitten.com/302/200" alt="Event 3" onclick="openModal(this.src)" />
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg" />
+</div>
+
+  <!-- Events Section -->
+  <section class="events">
+    <div class="container">
+      <h2>📅 Upcoming Events</h2>
+      <ul class="event-list">
+        <li><strong>June 10:</strong> Annual Science Exhibition</li>
+        <li><strong>June 15:</strong> Inter-School Debate Competition</li>
+        <li><strong>June 20:</strong> Parent-Teacher Meeting</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 People's English Boarding School. Made with ❤️ by Sanskar</p>
+    </div>
+  </footer>
+  <script>
+  function openModal(src) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "none";
+  }
+
+  // Optional: Close modal with ESC key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  });
+</script>
+
+</body>
+</html>
